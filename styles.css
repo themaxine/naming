@@ -1,0 +1,183 @@
+/* Configurações gerais */
+body {
+    margin: auto;
+    padding: 40px;
+    background-color: white;
+    color: #4e711e;
+    background-image: url('R.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% + 30px) calc(100% + 30px);
+    background-attachment: fixed;
+    background-size: 400px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    padding: 0px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2F2359;
+    border-bottom: 2px solid #2F2359;
+}
+
+/* Estrutura principal */
+main {
+    display: block;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+a {
+    font-size: 18px;
+    font-weight: 300;
+    color: #4e711e;
+}
+
+/* Conteúdo principal */
+.content, #about, #faq {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+h1 {
+    font-family: "Gowun Batang", serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+}
+
+h2 {
+    font-family: "Gowun Batang", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cta {
+    text-decoration: none;
+    font-family: 'Varta', sans-serif;
+    color: #4e711e;
+    padding: 5px 0;
+    border-bottom: 1px solid #4e711e;
+}
+
+.cta:hover {
+    color: #224411;
+    border-bottom: 1px solid #224411;
+}
+
+::selection {
+    background: #ffb;
+    color: #4e711e;
+}
+
+::-moz-selection {
+    background: #ffb;
+    color: #4e711e;
+}
+
+p {
+    font-size: 1 rem;
+    font-family: 'Varta', sans-serif;
+}
+
+b {
+    font-weight: 600;
+}
+
+/* Perguntas e respostas (FAQ) */
+.faq .answer {
+    display: none;
+}
+
+.faq .question {
+    cursor: pointer;
+}
+
+.faq .question::after {
+    content: "+";
+    float: right;
+}
+
+.faq .question.active::after {
+    content: "-";
+}
+
+.question {
+    font-family: "Gowun Batang", serif;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border-top: #224411 solid 1px;
+}
+
+.answer {
+    padding: 0 0 20px 0;
+    font-size: 0.9rem;
+    font-family: 'Varta', sans-serif;
+}
+
+#titulo-faq {
+    text-align: center;
+}
+
+/* Estilos para dispositivos menores */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .content, #about, #faq {
+        padding: 0 15px;
+    }
+
+    .cta {
+        font-size: 1rem;
+        padding: 4px 0;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    .question, .answer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .cta {
+        font-size: 0.9rem;
+        padding: 3px 0;
+    }
+
+    p, .answer, .question {
+        font-size: 0.85rem;
+    }
+}
